@@ -5,7 +5,7 @@ description: "How to use this blog template."
 cover: "./cover.jpg"
 coverInContent: false
 pinned: false
-tags: []
+tags: [Guide]
 category:
     - Guides:
         - Getting Started
