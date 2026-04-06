@@ -4,7 +4,7 @@ published: 2001-10-02
 description: "How to use this blog template."
 cover: "./cover.jpg"
 coverInContent: false
-pinned: true
+pinned: false
 tags: []
 category:
     - Guides:
