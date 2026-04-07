@@ -338,9 +338,33 @@ post:
 # 页脚配置
 footer:
     # 启用 Footer HTML 注入功能
-    enable: false
+    enable: true
     # 自定义 HTML 内容，用于添加备案号等信息
-    customHtml: ""
+    # customHtml: ""
+    customHtml: |
+        <div id="site-runtime" style="margin-top: 8px; font-size: 0.85em; opacity: 0.8;"></div>
+        <script>
+            function updateRuntime() {
+                // ⚠️ 请把下面这个时间换成你建站的真实时间！(格式：年/月/日 时:分:秒)
+                var startTime = new Date("2026/04/06 11:00:00");
+                var currentTime = new Date();
+                var timeDiff = currentTime.getTime() - startTime.getTime();
+                
+                var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+                
+                // 格式化补零，让数字更好看
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                
+                document.getElementById("site-runtime").innerHTML = " 本站已穩定運行: " + days + " 天 " + hours + " 小時 " + minutes + " 分鐘 " + seconds + " 秒";
+            }
+            setInterval(updateRuntime, 1000);
+            updateRuntime();
+        </script>
 
 # 粒子特效配置
 particle:
