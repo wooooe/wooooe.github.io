@@ -17,7 +17,7 @@ site:
         # 显示语言选择下拉框
         showSelectTag: false
         # 自动检测用户语言
-        autoDiscriminate: true
+        autoDiscriminate: false
         # 翻译时忽略的 CSS 类名
         ignoreClasses:
             - "ignore"
