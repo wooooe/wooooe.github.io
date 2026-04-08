@@ -5,16 +5,5 @@
   "date": "2026-04-08",
   "layout": "grid",
   "columns": 3,
-  "photos": [
-    {
-      "src": "/src/content/albums/tu1.jpg",
-      "alt": "1",
-      "date": "2026-04-08"
-    },
-    {
-      "src": "/src/content/albums/tu2.jpg",
-      "date": "2026-04-08"
-    }
-  ],
   "visible": true
 }
