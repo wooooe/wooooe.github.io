@@ -10,6 +10,11 @@ media:
     input: src/content/posts
     output: /src/content/posts
     categories: [image]
+  - name: notes
+    label: Notes Images
+    input: src/content/notes
+    output: /src/content/notes
+    categories: [image]  
   - name: diary
     label: Diary Images
     input: src/content/diary
