@@ -66,9 +66,7 @@ const { remarkPluginFrontmatter } = await render(entry);
 let isEncrypted = !!(entry.data.encrypted && entry.data.password);
 
 dayjs.extend(utc);
-const lastModified = dayjs(entry.data.updated || entry.data.published)
-    .utc()
-    .format("YYYY-MM-DDTHH:mm:ss");
+const lastModified = dayjs(entry.data.updated || entry.data.published).toISOString();
 
 const lastModifiedKeys = [
     I18nKey.lastModifiedPrefix,
@@ -229,6 +227,7 @@ const jsonLd = {
                             title={entry.data.title}
                             id={entry.id}
                             pubDate={entry.data.published}
+                            upDate={entry.data.updated}
                             author={entry.data.author}
                             sourceLink={entry.data.sourceLink}
                             licenseName={entry.data.licenseName}
@@ -262,6 +261,8 @@ const jsonLd = {
                         const startDate = new Date(lastModifiedElement.dataset.lastModified);
                         const currentDate = new Date();
                         const diff = currentDate - startDate;
+                        const validDiff = diff < 0 ? 0 : diff;
+                        if (diff < 0) diff = 0;
                         const seconds = Math.floor(diff / 1000);
                         const days = Math.floor(seconds / 86400);
                         const hours = Math.floor((seconds % 86400) / 3600);
