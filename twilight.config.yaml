@@ -50,16 +50,16 @@ site:
     # 壁纸配置
     wallpaper:
         # 模式 ("banner" 横幅 | "fullscreen" 全屏 | "none" 纯色)
-        mode: "none"
+        mode: "banner"
         # 图片源配置 (fullscreen 和 banner 模式共享)
         src:
             # 桌面壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             desktop:
-                # - "/assets/images/desktopWallpaper_1.jpg"
-                # - "/assets/images/desktopWallpaper_2.jpg"
-                # - "/assets/images/desktopWallpaper_3.jpg"
-                - "https://t.alcy.cc/ycy"
-                - "https://t.alcy.cc/ycy"
+                - "/assets/images/tu1.jpg"
+                - "/assets/images/tu2.jpg"
+                - "/assets/images/tu3.jpg"
+                - "/assets/images/tu4.jpg"
+                - "/assets/images/tu5.jpg"
             # 移动壁纸图片 (相对于 /public 目录; 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播)
             mobile:
                 # - "/assets/images/mobileWallpaper_1.jpg"
@@ -86,7 +86,7 @@ site:
                 title: "Ezorin"
                 # 副标题，支持单个字符串或字符串数组
                 subtitle:
-                    - "Illuminate Our Paths"
+                    - "Welcome to my personal space!"
                 # 副标题打字机效果
                 typewriter:
                     # 启用副标题打字机效果
@@ -120,7 +120,7 @@ site:
             # 层级
             zIndex: -1
             # 壁纸透明度，0-1之间
-            opacity: 0.9
+            opacity: 1
             # 背景模糊程度 (像素值)
             blur: 1
             # 导航栏透明模式
@@ -223,11 +223,11 @@ sidebar:
                 type: "profile"
                 # 位置策略 ("top" 顶部固定 | "sticky" 粘性)
                 position: "top"
-            - # 组件 - 公告 (预设)
-                # 类型
-                type: "announcement"
-                # 位置策略 ("top" 顶部固定 | "sticky" 粘性)
-                position: "top"
+            # - # 组件 - 公告 (预设)
+            #     # 类型
+            #     type: "announcement"
+            #     # 位置策略 ("top" 顶部固定 | "sticky" 粘性)
+            #     position: "top"
             - # 组件 - 目录 (预设)
                 # 类型
                 type: "directory"
@@ -286,7 +286,7 @@ profile:
     links:
         - # 链接示例
             # 名字
-            name: "GitHub"
+            name: ""
             # 图标
             icon: "fa6-brands:github"
             # 链接
