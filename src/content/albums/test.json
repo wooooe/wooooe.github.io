@@ -8,6 +8,7 @@
   "photos": [
     {
       "src": "/src/content/albums/tu1.jpg",
+      "alt": "1",
       "date": "2026-04-08"
     },
     {
